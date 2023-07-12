@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  Fetch Test Project
+
+  Created by Sean Erickson on 7/11/23.
+  
+*/
+
+// MARK: - ContentView
+"content.title" = "Desserts";
+
+// MARK: - DetailsView
+"details.category" = "Category:";
+"details.ingredients" = "Ingredients:";
+"details.instructions" = "Instructions:";
+"details.type" = "Type:";
