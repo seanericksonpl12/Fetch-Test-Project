@@ -12,16 +12,19 @@ class DetailsViewModel: ObservableObject {
     
     // MARK: - Published
     @Published var mealDetails: MealDetails = MealDetails()
-    @Published var id: String
+    @Published var displayError: Bool = false
+    
+    // MARK: - Properties
+    var id: String
     
     // MARK: - Publishers
     private lazy var detailsPublisher: AnyPublisher<MealDetails, Never> = {
-            NetworkManager.main.getMealDetails(id: id)
+        NetworkManager.main.getMealDetails(id: id)
+            .receive(on: DispatchQueue.main)
             .catch { error in
-                print("Network Error")
+                self.displayError = true
                 return Just(MealDetails())
             }
-            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }()
     
@@ -30,8 +33,4 @@ class DetailsViewModel: ObservableObject {
         self.id = id
         detailsPublisher.assign(to: &$mealDetails)
     }
-}
-
-extension DetailsViewModel {
-    
 }

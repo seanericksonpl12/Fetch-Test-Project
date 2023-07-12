@@ -15,7 +15,7 @@ class ContentViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var displayError: Bool = false
     
-    // MARK: - Computed
+    // MARK: - Computed Properties
     var searchMeals: [Meal] {
         if searchText.isEmpty {
             return meals
@@ -27,11 +27,11 @@ class ContentViewModel: ObservableObject {
     // MARK: - Publishers
     private lazy var mealPublisher: AnyPublisher<[Meal], Never> = {
         NetworkManager.main.getMeal()
+            .receive(on: DispatchQueue.main)
             .catch { error in
                 self.displayError = true
                 return Just([Meal]())
             }
-            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }()
     

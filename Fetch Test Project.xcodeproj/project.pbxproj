@@ -30,6 +30,8 @@
 		92FFA3632A5E22F000C5F278 /* ContentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA3622A5E22F000C5F278 /* ContentViewTests.swift */; };
 		92FFA3652A5E250000C5F278 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA3642A5E250000C5F278 /* NetworkTests.swift */; };
 		92FFA3682A5E2FDF00C5F278 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA3672A5E2FDF00C5F278 /* XCTestCaseExtension.swift */; };
+		92FFA36D2A5F5A8000C5F278 /* DetailsViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA36C2A5F5A8000C5F278 /* DetailsViewTests.swift */; };
+		92FFA36F2A5F684000C5F278 /* CollectionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA36E2A5F684000C5F278 /* CollectionExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		92FFA3622A5E22F000C5F278 /* ContentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewTests.swift; sourceTree = "<group>"; };
 		92FFA3642A5E250000C5F278 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		92FFA3672A5E2FDF00C5F278 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		92FFA36C2A5F5A8000C5F278 /* DetailsViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewTests.swift; sourceTree = "<group>"; };
+		92FFA36E2A5F684000C5F278 /* CollectionExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +233,7 @@
 		92FFA33E2A5CAD7400C5F278 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				92FFA3542A5DEEDA00C5F278 /* IconImages */,
+				92FFA3552A5DEF0300C5F278 /* KingfisherView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -243,21 +247,11 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
-		92FFA3542A5DEEDA00C5F278 /* IconImages */ = {
-			isa = PBXGroup;
-			children = (
-				92FFA3552A5DEF0300C5F278 /* KingfisherView.swift */,
-			);
-			path = IconImages;
-			sourceTree = "<group>";
-		};
 		92FFA35D2A5E229800C5F278 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				92FFA3662A5E2FC200C5F278 /* Extensions */,
-				92FFA3612A5E22C500C5F278 /* Models */,
 				92FFA3602A5E22BB00C5F278 /* Network */,
-				92FFA35F2A5E22AF00C5F278 /* Components */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -266,15 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				92FFA3622A5E22F000C5F278 /* ContentViewTests.swift */,
+				92FFA36C2A5F5A8000C5F278 /* DetailsViewTests.swift */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		92FFA35F2A5E22AF00C5F278 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		92FFA3602A5E22BB00C5F278 /* Network */ = {
@@ -285,17 +273,11 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		92FFA3612A5E22C500C5F278 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		92FFA3662A5E2FC200C5F278 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				92FFA3672A5E2FDF00C5F278 /* XCTestCaseExtension.swift */,
+				92FFA36E2A5F684000C5F278 /* CollectionExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -468,7 +450,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92FFA3682A5E2FDF00C5F278 /* XCTestCaseExtension.swift in Sources */,
+				92FFA36F2A5F684000C5F278 /* CollectionExtensionTests.swift in Sources */,
 				92FFA3652A5E250000C5F278 /* NetworkTests.swift in Sources */,
+				92FFA36D2A5F5A8000C5F278 /* DetailsViewTests.swift in Sources */,
 				92FFA3632A5E22F000C5F278 /* ContentViewTests.swift in Sources */,
 				92FFA31F2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift in Sources */,
 			);

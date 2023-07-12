@@ -20,7 +20,10 @@ public class NetworkManager {
     
     // MARK: - Public Functions
     func getMeal() -> AnyPublisher<[Meal], Error> {
-        guard let url = URL(string: dessertEndpoint) else { return Fail(error: NetworkError.invalidURL("Bad URL")).eraseToAnyPublisher() }
+        guard let url = URL(string: dessertEndpoint) else {
+            return Fail(error: NetworkError.invalidURL("Bad URL")).eraseToAnyPublisher()
+        }
+        
         return URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: Meals.self, decoder: JSONDecoder())
@@ -29,20 +32,22 @@ public class NetworkManager {
     }
     
     func getMealDetails(id: String) -> AnyPublisher<MealDetails, Error> {
-        guard let url = URL(string: detailsEndpoint + id) else { return Fail(error: NetworkError.invalidURL("Bad URL")).eraseToAnyPublisher() }
+        guard let url = URL(string: detailsEndpoint + id) else {
+            return Fail(error: NetworkError.invalidURL("Bad URL")).eraseToAnyPublisher()
+        }
+        
         return URLSession.shared.dataTaskPublisher(for: url)
-            .map { data, response in
-                do {
-                    let json = try JSON(data: data)
-                    return self.sortJSON(json: json)
-                } catch { return MealDetails() }
-            }
-            .catch { _ in return Fail(error: NetworkError.noResponse("Bad response"))}
+            .map(\.data)
+            .tryMap { try self.sortJSON(json: try JSON(data: $0)) }
             .eraseToAnyPublisher()
     }
     
-    // MARK: - Private Helpers
-    private func sortJSON(json: JSON) -> MealDetails {
+    // MARK: - Helpers
+    func sortJSON(json: JSON) throws -> MealDetails {
+        
+        if !json["meals"].exists() { throw NetworkError.noResponse("Bad Response") }
+        if json["meals"][0] == JSON.null { throw NetworkError.invalidURL("Invalid ID") }
+        
         let arr = json["meals"][0]
             .filter { $0.1 != JSON.null && $0.1 != "" && $0.1 != " " }
             .sorted { $0.0 < $1.0 }
