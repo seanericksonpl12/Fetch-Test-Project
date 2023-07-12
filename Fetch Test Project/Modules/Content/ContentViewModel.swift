@@ -10,14 +10,25 @@ import Combine
 
 class ContentViewModel: ObservableObject {
     
-    // MARK: - Published
+    // MARK: - Published Properties
     @Published var meals: [Meal] = []
+    @Published var searchText: String = ""
+    @Published var displayError: Bool = false
+    
+    // MARK: - Computed
+    var searchMeals: [Meal] {
+        if searchText.isEmpty {
+            return meals
+        } else {
+            return meals.filter { $0.strMeal.contains(searchText) }
+        }
+    }
     
     // MARK: - Publishers
     private lazy var mealPublisher: AnyPublisher<[Meal], Never> = {
         NetworkManager.main.getMeal()
             .catch { error in
-                print("network error!")
+                self.displayError = true
                 return Just([Meal]())
             }
             .receive(on: DispatchQueue.main)

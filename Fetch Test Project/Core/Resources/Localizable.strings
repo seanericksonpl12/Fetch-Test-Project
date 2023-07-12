@@ -8,6 +8,7 @@
 
 // MARK: - ContentView
 "content.title" = "Desserts";
+"content.error.message" = "Something went wrong...";
 
 // MARK: - DetailsView
 "details.category" = "Category:";

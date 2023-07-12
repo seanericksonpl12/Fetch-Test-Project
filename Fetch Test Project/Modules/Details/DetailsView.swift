@@ -14,6 +14,9 @@ struct DetailsView: View {
     
     // MARK: - Body
     var body: some View {
+        
+        // TODO: - Error handling for network request
+        
         ScrollView {
             KingfisherView(url: viewModel.mealDetails.strMealThumb, frame: CGSize(width: 200, height: 100))
                 .padding()

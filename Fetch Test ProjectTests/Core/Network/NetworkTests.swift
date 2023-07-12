@@ -22,7 +22,7 @@ final class NetworkTests: XCTestCase {
     }
     
     func testGetMeals() throws {
-        var meals = try waitForPublisher(publisher: network.getMeal(), timeout: 5)
+        let meals = try waitForPublisher(publisher: network.getMeal(), timeout: 5)
         
         XCTAssertFalse(meals.isEmpty)
         XCTAssertTrue(meals.allSatisfy { $0.strMeal != "" })
@@ -30,7 +30,7 @@ final class NetworkTests: XCTestCase {
     
     func testGetDetails() throws {
         let id = "52767"
-        var details = try waitForPublisher(publisher: network.getMealDetails(id: id), timeout: 5)
+        let details = try waitForPublisher(publisher: network.getMealDetails(id: id), timeout: 5)
         XCTAssertNotNil(details.strMealThumb)
         XCTAssertEqual(details.strMeal, "Bakewell tart")
         XCTAssertEqual(details.strArea, "British")

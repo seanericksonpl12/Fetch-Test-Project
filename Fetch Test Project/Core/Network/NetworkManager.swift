@@ -62,7 +62,7 @@ public class NetworkManager {
             }
         }
         
-        // Combine measurements and ingredients
+        // Combine measurement & ingrd to single string
         for (index, _) in measurements.enumerated() {
             guard let measure = measurements[safe: index] else { continue }
             guard let ingrd = ingredients[safe: index] else { continue }
