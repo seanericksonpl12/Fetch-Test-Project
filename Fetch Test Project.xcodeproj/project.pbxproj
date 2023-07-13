@@ -11,7 +11,6 @@
 		92FFA3102A5CAC3C00C5F278 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA30F2A5CAC3C00C5F278 /* ContentView.swift */; };
 		92FFA3122A5CAC3C00C5F278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FFA3112A5CAC3C00C5F278 /* Assets.xcassets */; };
 		92FFA3152A5CAC3C00C5F278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92FFA3142A5CAC3C00C5F278 /* Preview Assets.xcassets */; };
-		92FFA31F2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA31E2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift */; };
 		92FFA3292A5CAC3C00C5F278 /* Fetch_Test_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA3282A5CAC3C00C5F278 /* Fetch_Test_ProjectUITests.swift */; };
 		92FFA32B2A5CAC3C00C5F278 /* Fetch_Test_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA32A2A5CAC3C00C5F278 /* Fetch_Test_ProjectUITestsLaunchTests.swift */; };
 		92FFA3402A5CAED900C5F278 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FFA33F2A5CAED900C5F278 /* NetworkManager.swift */; };
@@ -58,7 +57,6 @@
 		92FFA3112A5CAC3C00C5F278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92FFA3142A5CAC3C00C5F278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92FFA31A2A5CAC3C00C5F278 /* Fetch Test ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch Test ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92FFA31E2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_Test_ProjectTests.swift; sourceTree = "<group>"; };
 		92FFA3242A5CAC3C00C5F278 /* Fetch Test ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch Test ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FFA3282A5CAC3C00C5F278 /* Fetch_Test_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_Test_ProjectUITests.swift; sourceTree = "<group>"; };
 		92FFA32A2A5CAC3C00C5F278 /* Fetch_Test_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch_Test_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 			children = (
 				92FFA35E2A5E229E00C5F278 /* Modules */,
 				92FFA35D2A5E229800C5F278 /* Core */,
-				92FFA31E2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift */,
 			);
 			path = "Fetch Test ProjectTests";
 			sourceTree = "<group>";
@@ -454,7 +451,6 @@
 				92FFA3652A5E250000C5F278 /* NetworkTests.swift in Sources */,
 				92FFA36D2A5F5A8000C5F278 /* DetailsViewTests.swift in Sources */,
 				92FFA3632A5E22F000C5F278 /* ContentViewTests.swift in Sources */,
-				92FFA31F2A5CAC3C00C5F278 /* Fetch_Test_ProjectTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,12 +18,12 @@ struct DetailsView: View {
         if !viewModel.displayError {
             ScrollView {
                 KingfisherView(url: viewModel.mealDetails.strMealThumb, frame: CGSize(width: 200, height: 100))
-                    .padding()
+                    .padding(.top)
                 HStack {
                     Spacer()
-                    Text("details.category".localized + " " + viewModel.mealDetails.strCategory)
-                    Spacer()
-                    Text("details.type".localized + " " + viewModel.mealDetails.strArea)
+                    Text(viewModel.mealDetails.strArea + " " + viewModel.mealDetails.strCategory)
+                        .font(.subheadline)
+                        .padding(.bottom)
                     Spacer()
                 }
                 Divider()
@@ -40,6 +40,7 @@ struct DetailsView: View {
                 Text(viewModel.mealDetails.strInstructions)
                     .font(.subheadline)
                     .padding()
+                Divider()
                 if let youtube = viewModel.mealDetails.strYoutube {
                     Link(destination: youtube) {
                         Text("details.youtube".localized)
